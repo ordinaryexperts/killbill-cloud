@@ -1,5 +1,11 @@
 FROM killbill/kaui:0.8.9
+
+COPY --chown=tomcat7:tomcat7 ./plugins/killbill-braintree_blue-0.3.1/  $KILLBILL_HOME/bundles/plugins/ruby/
+
 USER root
+
+RUN chown tomcat7:tomcat7 /var/lib/killbill/bundles/plugins
+
 RUN apt-get update && apt-get install -y \
         ssl-cert \
         && apt-get clean
