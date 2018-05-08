@@ -1,0 +1,26 @@
+require 'openssl'
+require 'action_controller'
+require 'active_record'
+require 'action_view'
+require 'active_merchant'
+require 'active_support'
+require 'bigdecimal'
+require 'money'
+require 'monetize'
+require 'offsite_payments'
+require 'pathname'
+require 'sinatra'
+require 'singleton'
+require 'yaml'
+
+require 'killbill'
+require 'killbill/helpers/active_merchant'
+
+require 'braintree_blue/ext/active_merchant/active_merchant.rb'
+
+require 'braintree_blue/api'
+require 'braintree_blue/private_api'
+
+require 'braintree_blue/models/payment_method'
+require 'braintree_blue/models/response'
+require 'braintree_blue/models/transaction'
